@@ -13,9 +13,15 @@
 		36715ED21EAF801600DA0E73 /* ApresCuisineDeux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36715ED01EAF801600DA0E73 /* ApresCuisineDeux.xcdatamodeld */; };
 		36715ED41EAF801600DA0E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36715ED31EAF801600DA0E73 /* Assets.xcassets */; };
 		36715ED71EAF801600DA0E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36715ED51EAF801600DA0E73 /* LaunchScreen.storyboard */; };
+		36715EDF1EAF87C600DA0E73 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715EDE1EAF87C600DA0E73 /* Dish.swift */; };
+		36715EE11EAF880300DA0E73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715EE01EAF880300DA0E73 /* DetailViewController.swift */; };
+		36715EE31EAF90E300DA0E73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715EE21EAF90E300DA0E73 /* MapViewController.swift */; };
+		36715EE51EAFE5D300DA0E73 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715EE41EAFE5D300DA0E73 /* CameraManager.swift */; };
+		E3E059CDE659C02591588841 /* Pods_ApresCuisineDeux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1323407D328ABB0F68B744B6 /* Pods_ApresCuisineDeux.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1323407D328ABB0F68B744B6 /* Pods_ApresCuisineDeux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApresCuisineDeux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36715EC61EAF801600DA0E73 /* ApresCuisineDeux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApresCuisineDeux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36715EC91EAF801600DA0E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36715ECB1EAF801600DA0E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		36715ED31EAF801600DA0E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36715ED61EAF801600DA0E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36715ED81EAF801600DA0E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36715EDE1EAF87C600DA0E73 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		36715EE01EAF880300DA0E73 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		36715EE21EAF90E300DA0E73 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		36715EE41EAFE5D300DA0E73 /* CameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		44CEE9153838AFD2B3123658 /* Pods-ApresCuisineDeux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApresCuisineDeux.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApresCuisineDeux/Pods-ApresCuisineDeux.release.xcconfig"; sourceTree = "<group>"; };
+		EA9A45F7ECBF526883B6CBC1 /* Pods-ApresCuisineDeux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApresCuisineDeux.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApresCuisineDeux/Pods-ApresCuisineDeux.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E059CDE659C02591588841 /* Pods_ApresCuisineDeux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				36715EC81EAF801600DA0E73 /* ApresCuisineDeux */,
 				36715EC71EAF801600DA0E73 /* Products */,
+				AC3A6C5DC7FD5C3847B7E730 /* Pods */,
+				98DF709CC0EF7818BF79D079 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,36 @@
 		36715EC81EAF801600DA0E73 /* ApresCuisineDeux */ = {
 			isa = PBXGroup;
 			children = (
+				36715EE41EAFE5D300DA0E73 /* CameraManager.swift */,
 				36715EC91EAF801600DA0E73 /* AppDelegate.swift */,
 				36715ECB1EAF801600DA0E73 /* ViewController.swift */,
+				36715EDE1EAF87C600DA0E73 /* Dish.swift */,
+				36715EE01EAF880300DA0E73 /* DetailViewController.swift */,
 				36715ECD1EAF801600DA0E73 /* Main.storyboard */,
+				36715EE21EAF90E300DA0E73 /* MapViewController.swift */,
 				36715ED31EAF801600DA0E73 /* Assets.xcassets */,
 				36715ED51EAF801600DA0E73 /* LaunchScreen.storyboard */,
 				36715ED81EAF801600DA0E73 /* Info.plist */,
 				36715ED01EAF801600DA0E73 /* ApresCuisineDeux.xcdatamodeld */,
 			);
 			path = ApresCuisineDeux;
+			sourceTree = "<group>";
+		};
+		98DF709CC0EF7818BF79D079 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1323407D328ABB0F68B744B6 /* Pods_ApresCuisineDeux.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC3A6C5DC7FD5C3847B7E730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA9A45F7ECBF526883B6CBC1 /* Pods-ApresCuisineDeux.debug.xcconfig */,
+				44CEE9153838AFD2B3123658 /* Pods-ApresCuisineDeux.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36715EDB1EAF801600DA0E73 /* Build configuration list for PBXNativeTarget "ApresCuisineDeux" */;
 			buildPhases = (
+				4704CFFD20C291292AB960A5 /* [CP] Check Pods Manifest.lock */,
 				36715EC21EAF801600DA0E73 /* Sources */,
 				36715EC31EAF801600DA0E73 /* Frameworks */,
 				36715EC41EAF801600DA0E73 /* Resources */,
+				21834A0A64528758E141AE9D /* [CP] Embed Pods Frameworks */,
+				D6A1F164990111F2301617C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +173,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21834A0A64528758E141AE9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApresCuisineDeux/Pods-ApresCuisineDeux-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4704CFFD20C291292AB960A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6A1F164990111F2301617C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApresCuisineDeux/Pods-ApresCuisineDeux-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36715EC21EAF801600DA0E73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36715ECC1EAF801600DA0E73 /* ViewController.swift in Sources */,
+				36715EE51EAFE5D300DA0E73 /* CameraManager.swift in Sources */,
+				36715EE31EAF90E300DA0E73 /* MapViewController.swift in Sources */,
+				36715EDF1EAF87C600DA0E73 /* Dish.swift in Sources */,
+				36715EE11EAF880300DA0E73 /* DetailViewController.swift in Sources */,
 				36715ECA1EAF801600DA0E73 /* AppDelegate.swift in Sources */,
 				36715ED21EAF801600DA0E73 /* ApresCuisineDeux.xcdatamodeld in Sources */,
 			);
@@ -262,6 +353,7 @@
 		};
 		36715EDC1EAF801600DA0E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9A45F7ECBF526883B6CBC1 /* Pods-ApresCuisineDeux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApresCuisineDeux/Info.plist;
@@ -274,6 +366,7 @@
 		};
 		36715EDD1EAF801600DA0E73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44CEE9153838AFD2B3123658 /* Pods-ApresCuisineDeux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApresCuisineDeux/Info.plist;
@@ -303,6 +396,7 @@
 				36715EDD1EAF801600DA0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
