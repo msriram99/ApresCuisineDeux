@@ -180,8 +180,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="DishImage" destination="muN-hU-voK" id="fmL-bl-uzx"/>
                         <outlet property="ShareButton" destination="pFL-Q9-aFA" id="Azw-MR-5am"/>
+                        <outlet property="capturedImage" destination="muN-hU-voK" id="RVS-J8-R0j"/>
                         <outlet property="dateeatenDateField" destination="F0X-vb-4Fv" id="e2O-Ex-DFo"/>
                         <outlet property="dishNameTextField" destination="f10-Po-oCo" id="Adf-e2-BqX"/>
                         <outlet property="ratingTextField" destination="SoG-sC-Gzg" id="zn9-Di-g5u"/>

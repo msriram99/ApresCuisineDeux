@@ -117,7 +117,7 @@ class CameraManager: NSObject, AVCapturePhotoCaptureDelegate {
     private func askForCameraAccess() {
         AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { (success) in
             if success {
-                self.startupCamera()
+              //  self.startupCamera()
             } else {
                 print("User didn't give us access")
             }
@@ -128,7 +128,7 @@ class CameraManager: NSObject, AVCapturePhotoCaptureDelegate {
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
         case .authorized:
             print("Startup Camera")
-            startupCamera()
+          //  startupCamera()
         case .denied, .restricted:
             print("User didn't give us access")
         case .notDetermined:
