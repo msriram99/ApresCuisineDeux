@@ -71,8 +71,11 @@ class ViewController: UIViewController ,UITableViewDelegate, UITableViewDataSour
         let currentDish = DishArray[indexPath.row]
         
         cell.textLabel!.text = "Name: \(currentDish.name )"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        let result = formatter.string(from: currentDish.dateeaten! )
         
-        cell.detailTextLabel!.text = "\(currentDish.dateeaten!), \(currentDish.rating),\(currentDish.review)"
+        cell.detailTextLabel!.text = "\(result), \(currentDish.rating),\(currentDish.review)"
         
         //   print("here1")
         return cell

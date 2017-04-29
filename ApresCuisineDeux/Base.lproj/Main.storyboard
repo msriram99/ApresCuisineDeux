@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,18 +28,18 @@
                                         <rect key="frame" x="0.0" y="28" width="367" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mjI-4M-dit" id="7vd-8i-gGb">
-                                            <frame key="frameInset" width="367" height="43.5"/>
+                                            <frame key="frameInset" width="367" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S45-ax-n8r">
-                                                    <frame key="frameInset" minX="15" minY="5" width="33.5" height="20.5"/>
+                                                    <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HwN-BE-hTf">
-                                                    <frame key="frameInset" minX="15" minY="25.5" width="44" height="14.5"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -53,6 +52,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FSe-B1-4mg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yde-j5-4mH"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5vv-B1-BFe">
                                 <frame key="frameInset" minY="12" height="44"/>
@@ -110,7 +113,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="F0X-vb-4Fv">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="F0X-vb-4Fv">
+                                <frame key="frameInset" minX="8" minY="212" width="367" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="513648892.89756203">
                                     <!--2017-04-12 00:14:52 +0000-->
                                 </date>
@@ -147,14 +152,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XTf-kw-cgP">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XTf-kw-cgP">
+                                <frame key="frameInset" minX="67" minY="472" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C9V-7f-7ea">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C9V-7f-7ea">
+                                        <frame key="frameInset" width="240" height="128"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muN-hU-voK">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="VPA-A6-flP"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muN-hU-voK">
+                                                <frame key="frameInset" width="240" height="128"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -170,14 +176,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="F0X-vb-4Fv" firstAttribute="top" secondItem="BpC-Wh-Nkl" secondAttribute="top" constant="205" id="7pa-KJ-cic"/>
-                            <constraint firstItem="XTf-kw-cgP" firstAttribute="top" secondItem="F0X-vb-4Fv" secondAttribute="bottom" constant="51" id="Ff0-Xa-C5z"/>
-                            <constraint firstItem="F0X-vb-4Fv" firstAttribute="leading" secondItem="BpC-Wh-Nkl" secondAttribute="leading" constant="8" id="Pc6-Kd-nzA"/>
-                            <constraint firstAttribute="trailing" secondItem="F0X-vb-4Fv" secondAttribute="trailing" constant="367" id="gbH-xx-g0P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XTf-kw-cgP" secondAttribute="trailing" constant="52" id="uxP-I4-yeu"/>
-                            <constraint firstItem="XTf-kw-cgP" firstAttribute="leading" secondItem="BpC-Wh-Nkl" secondAttribute="leadingMargin" constant="51" id="wIu-Uf-DYU"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ShareButton" destination="pFL-Q9-aFA" id="Azw-MR-5am"/>
@@ -191,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUA-ok-DkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="74"/>
+            <point key="canvasLocation" x="920.79999999999995" y="73.313343328335833"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="o3c-G2-tcP">
@@ -206,14 +204,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jZq-N5-gyR">
-                                <frame key="frameInset" minY="28" width="375" height="639"/>
+                                <frame key="frameInset" minY="51" width="375" height="616"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ImT-RB-vHn" id="Zf1-Vu-B2S"/>
+                                </connections>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qO-iH-Oa2">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="xQp-cd-rtW">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="4mu-oZ-rBj">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="Sbw-CA-kuB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="MkMapView" destination="jZq-N5-gyR" id="U2O-du-VxP"/>
+                        <outlet property="foodMapView" destination="jZq-N5-gyR" id="HzW-Fo-ftX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT9-zJ-Wld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,6 +236,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wwP-cY-DmS"/>
+        <segue reference="ynM-51-6oe"/>
+        <segue reference="Sbw-CA-kuB"/>
     </inferredMetricsTieBreakers>
 </document>

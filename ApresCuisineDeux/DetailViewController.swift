@@ -50,15 +50,41 @@ class DetailViewController: UIViewController,  UIImagePickerControllerDelegate,U
         cameraMgr.checkForCameraAuthorization()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showMap"{
+            let destinationVC = segue.destination as! MapViewController
+            destinationVC.currentdish = currentdish
+         }
+        
+    }
+
+    
     func display(dish: Dish) {
         
         dishNameTextField.text = dish.name
         reviewTextField.text = dish.review
         ratingTextField.text =  "\(dish.rating)"
         dateeatenDateField.date = dish.dateeaten!
+        if dish.image != nil {
+            print("Image")
+            
+            let imageUrl =  getDocumentPathForFile(filename: (dish.image)!)
+            print("\(imageUrl)")
+            capturedImage.image = UIImage(contentsOfFile: imageUrl.path)
+        }
         
         
     }
+    
+    func getDocumentPathForFile(filename: String) -> URL {
+        let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let docURL = URL(fileURLWithPath: docPath)
+        return docURL.appendingPathComponent(filename)
+    }
+    
     
     func showdefault(){
         
@@ -124,6 +150,34 @@ class DetailViewController: UIViewController,  UIImagePickerControllerDelegate,U
         // self.navigationController!.popViewController(animated: true)
     }
     
+    
+    public func save(image: UIImage)  {
+        save(image: image, filename: getNewImageFilename())
+        
+    }
+    
+    private func save(image: UIImage, filename: String)   {
+        
+        do {
+            
+            let localPath = getDocumentPathForFile(filename: filename)
+            guard let png = UIImagePNGRepresentation(image) else {
+                print("Error: Failed to create PNG")
+                return
+            }
+            try png.write(to: localPath)
+            print("Saved: \(filename)")
+            
+            currentdish?.image = filename
+            editTask(dish: currentdish!)
+            
+        } catch let error {
+            print("Error: Saving local failed \(error.localizedDescription)")
+            
+        }
+    }
+    
+
     @IBAction func PictureButtonPressed(_ sender: UIBarButtonItem) {
         
         print("Camera")
@@ -155,6 +209,10 @@ class DetailViewController: UIViewController,  UIImagePickerControllerDelegate,U
             //        vc.excludedActivityTypes = [UIActivityTypeMail]
             self.present(vc, animated: true, completion: nil)
         }
+    }
+    
+    public func getNewImageFilename() -> String {
+        return ProcessInfo.processInfo.globallyUniqueString + ".png"
     }
     
     

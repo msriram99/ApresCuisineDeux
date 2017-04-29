@@ -19,6 +19,10 @@ class Dish: PFObject, PFSubclassing {
     @NSManaged var  rating          :Int
     @NSManaged var  review  :String
     @NSManaged var  image  :String?
+    @NSManaged var  Lat  :Double
+    @NSManaged var lon :Double
+    
+    
     
     
     convenience init(name: String, date: Date, rate: Int, review: String) {

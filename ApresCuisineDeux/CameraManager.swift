@@ -137,7 +137,7 @@ class CameraManager: NSObject, AVCapturePhotoCaptureDelegate {
     }
     
     //MARK: - File Management Methods
-    private func getNewImageFilename() -> String {
+   private func getNewImageFilename() -> String {
         return ProcessInfo.processInfo.globallyUniqueString + ".png"
     }
     
